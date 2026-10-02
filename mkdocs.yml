@@ -1,0 +1,82 @@
+site_name: RedLight Studio Kit
+site_description: One-click studio lighting, backdrops, cameras and HDRIs for Blender.
+site_author: Red Engine Animation Studios
+# Set these to your GitHub Pages URL and repo before deploying:
+site_url: https://redengineanimation.github.io/redlight-studio-kit/
+repo_url: https://github.com/redengineanimation/redlight-studio-kit
+repo_name: redengineanimation/redlight-studio-kit
+copyright: Copyright &copy; 2026 Red Engine Animation Studios
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+
+plugins:
+  - search
+
+extra:
+  version:
+    provider: mike
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: installation.md
+      - Quick Start: quick-start.md
+  - Using RedLight:
+      - The Panel: interface.md
+      - The Rig: rig.md
+      - Studio Kits: kits.md
+      - Lights: lights.md
+      - Backdrops & Floor: backdrops.md
+      - Camera: camera.md
+      - HDRI: hdri.md
+      - Gobo & IES: light-textures.md
+  - Reference:
+      - Kit List: kit-list.md
+      - Custom Kits: custom-kits.md
+      - EEVEE & Cycles: render-engines.md
+  - Help:
+      - FAQ: faq.md
+      - Changelog: changelog.md
+
+extra_css:
+  - assets/extra.css
